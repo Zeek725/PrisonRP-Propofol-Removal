@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y lib32gcc1
+          sudo apt-get install -y lib32gcc-s1
 
       - name: Install SteamCMD
         run: |
