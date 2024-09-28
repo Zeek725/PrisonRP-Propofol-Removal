@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <jobname.headguard>Head Guard</jobname.headguard>
+  <jobdescription.headguard>The head guard's job is to make sure the security team isn't slacking off. Has full command over the security team. Warden's second hand man.</jobdescription.headguard>
+  <jobname.convict>Prisoner</jobname.convict>
+  <jobdescription.convict>A criminal that has been detained. Their job is to escape.</jobdescription.convict>
+  <jobname.staff>Maintenance Technician</jobname.staff>
+  <jobdescription.staff>They ensure the station is in operational order, and the hull is welded properly.</jobdescription.staff>
+  <jobname.prisondoctor>Prison Doctor</jobname.prisondoctor>
+  <jobdescription.prisondoctor>Their job is to make sure the staff and prisoners are healthy.</jobdescription.prisondoctor>
+  <jobname.guard>Guard</jobname.guard>
+  <jobdescription.guard>They make sure that all the prisoners stay in line. Follows orders from head guard and the warden.</jobdescription.guard>
+  <jobname.warden>Warden</jobname.warden>
+  <jobdescription.warden>The commander of the station. Make sure the prison operation runs smoothly. Send announcements, give orders, and more.</jobdescription.warden>
+  <jobname.janitor>Janitor</jobname.janitor>
+  <jobdescription.janitor>Making sure the corridors are squeaky clean.</jobdescription.janitor>
+  <talenttree.savage>Savage</talenttree.savage>
+  <talenttree.jacktrades>Jack of all Trades</talenttree.jacktrades>
+  <talenttree.escapist>Escapist</talenttree.escapist>
+  <talenttree.detective>Detective</talenttree.detective>
+  <talenttree.surgeon>Surgeon</talenttree.surgeon>
+  <talenttree.cleaning_clown>Cleaning Clown</talenttree.cleaning_clown>
+  <talenttree.professional>Professional</talenttree.professional>
+  <talentname.combatinstincts>Combat Instincts</talentname.combatinstincts>
+  <talentdescription.combatinstincts>Do triple damage with diving knives.</talentdescription.combatinstincts>
+  <talentname.imadoctornota>Mastermind</talentname.imadoctornota>
+  <afflictionname.scp_presolatexinfection>Latex Conversion</afflictionname.scp_presolatexinfection>
+  <afflictiondescription.scp_presolatexinfection>The patient's dermal, subcutaneous and muscle tissues are rapidly being converted into Preso Latex. The affected areas beginning to rapidly shut down, with the patient's skin turning an anoxic black.</afflictiondescription.scp_presolatexinfection>
+  <afflictioncauseofdeath.scp_presolatexinfection>Turned into a lifeless rubber statue.</afflictioncauseofdeath.scp_presolatexinfection>
+  <afflictioncauseofdeathself.scp_presolatexinfection>You have been converted into a lifeless rubber statue of your former self.</afflictioncauseofdeathself.scp_presolatexinfection>
+  <afflictionname.scp_devilpoisoning>Devil's Blood Toxicosis</afflictionname.scp_devilpoisoning>
+  <afflictiondescription.scp_devilpoisoning>The patient's skin is slowly becoming vividly flushed, the epidermal and dermal tissues showing apparent signs of spontaneous hemorrhaging, along with the patient suffering from severe expistaxis and subconjunctival hemorrhages to the major eye blood vessels.</afflictiondescription.scp_devilpoisoning>
+  <afflictioncauseofdeath.scp_devilpoisoning>Liquefied from the inside.</afflictioncauseofdeath.scp_devilpoisoning>
+  <afflictioncauseofdeathself.scp_devilpoisoning>Your internal organs have been liquefied by Devil's Blood.</afflictioncauseofdeathself.scp_devilpoisoning>
+  <afflictionname.scp_wastingdisease>Submariner's Wasting Disease</afflictionname.scp_wastingdisease>
+  <afflictiondescription.scp_wastingdisease>The patient's CNS is showing signs of severe atrophy from a rare but infamous Prion disease. The eyes fail to focus and their cognition is beginning to rapidly deteriorate.</afflictiondescription.scp_wastingdisease>
+  <afflictioncauseofdeath.scp_wastingdisease>Died from CNS atrophy via Submariner's Wasting Disease.</afflictioncauseofdeath.scp_wastingdisease>
+  <afflictioncauseofdeathself.scp_wastingdisease>Your CNS was atrophied away by Submariner's Wasting Disease.</afflictioncauseofdeathself.scp_wastingdisease>
+  <afflictionname.scp_lineavirus>Brunhes Lineavirus</afflictionname.scp_lineavirus>
+  <afflictiondescription.scp_lineavirus>The patient is showing signs of infection with Brunhes Lineavirus, experiencing symptoms such as laboured breathing, extreme coughing fits and gastrointestinal inflammation. The epidermal tissue turning a horrifically vivid green is a significant indicator of this infection.</afflictiondescription.scp_lineavirus>
+  <afflictioncauseofdeath.scp_lineavirus>Killed by the Brunhes Lineavirus.</afflictioncauseofdeath.scp_lineavirus>
+  <afflictioncauseofdeathself.scp_lineavirus>You succumbed to the Brunhes Lineavirus.</afflictioncauseofdeathself.scp_lineavirus>
+  <afflictionname.scp_lineaviruscontagion>Brunhes Lineavirus Contagion Handler</afflictionname.scp_lineaviruscontagion>
+  <afflictiondescription.scp_lineaviruscontagion>An affliction for handling the infection with Brunhes Lineavirus (Thanks mcbone_kenny for recommending this)</afflictiondescription.scp_lineaviruscontagion>
+  <afflictioncauseofdeath.scp_lineaviruscontagion>Killed by the Brunhes Lineavirus.</afflictioncauseofdeath.scp_lineaviruscontagion>
+  <afflictioncauseofdeathself.scp_lineaviruscontagion>You succumbed to the Brunhes Lineavirus.</afflictioncauseofdeathself.scp_lineaviruscontagion>
+  <afflictionname.scp_vomiting>Profuse Vomiting</afflictionname.scp_vomiting>
+  <afflictiondescription.scp_vomiting>The patient's GI tract is significantly disturbed by something, near constantly having to stop in order to vomit, the signs of hematemesis visible as blood is beginning to appear.</afflictiondescription.scp_vomiting>
+  <afflictioncauseofdeath.scp_vomiting>Choked on vomit.</afflictioncauseofdeath.scp_vomiting>
+  <afflictioncauseofdeathself.scp_vomiting>You have choked on your own vomit.</afflictioncauseofdeathself.scp_vomiting>
+  <afflictionname.scp_vomitingblood>Hematemesis</afflictionname.scp_vomitingblood>
+  <afflictiondescription.scp_vomitingblood>The patient's GI tract is showing signs of rupturing, occasionally vomiting large volumes of blood.</afflictiondescription.scp_vomitingblood>
+  <afflictioncauseofdeath.scp_vomitingblood>Bled to death internally.</afflictioncauseofdeath.scp_vomitingblood>
+  <afflictioncauseofdeathself.scp_vomitingblood>You have bled to death internally.</afflictioncauseofdeathself.scp_vomitingblood>
+  <afflictionname.scp_ae035curse>Strange Curse</afflictionname.scp_ae035curse>
+  <afflictiondescription.scp_ae035curse>The patient is rapidly decomposing internally and externally, each individual tissue layer growing anoxic and necrotic. Their mind is delusional and obssessed with a specific object they refuse to elaborate on.</afflictiondescription.scp_ae035curse>
+  <afflictioncauseofdeath.scp_ae035curse>Withered away into nothing.</afflictioncauseofdeath.scp_ae035curse>
+  <afflictioncauseofdeathself.scp_ae035curse>You withered away into nothing.</afflictioncauseofdeathself.scp_ae035curse>
+  <afflictionname.scp_ae035damage>Unexplained Rash</afflictionname.scp_ae035damage>
+  <afflictiondescription.scp_ae035damage>Strange, blackened marks can be seen on the patient, the mark itself and the local tissue completely numb to any sensation.</afflictiondescription.scp_ae035damage>
+  <afflictioncauseofdeath.scp_ae035damage>Atrophied away.</afflictioncauseofdeath.scp_ae035damage>
+  <afflictioncauseofdeathself.scp_ae035damage>Your cells atrophied away into nothing.</afflictioncauseofdeathself.scp_ae035damage>
+  <afflictionname.scp_hexgasdamage>Hexa-Nova Intoxication</afflictionname.scp_hexgasdamage>
+  <afflictiondescription.scp_hexgasdamage>The patient is experiencing rapid degredation of the CNS, cardiovascular and muscular systems, their skin growing necrotic before your eyes.</afflictiondescription.scp_hexgasdamage>
+  <afflictioncauseofdeath.scp_hexgasdamage>Rapidly burnt away on the inside and out.</afflictioncauseofdeath.scp_hexgasdamage>
+  <afflictioncauseofdeathself.scp_hexgasdamage>You haved died from the effects of Hexa-Nova exposure.</afflictioncauseofdeathself.scp_hexgasdamage>
+  <entityname.scp_replicatinglatex>Preso Latex Globule</entityname.scp_replicatinglatex>
+  <entitydescription.scp_replicatinglatex>A semi-organic polymer which has the inherent ability to replicate organic matter into more of itself through a poorly understood mutagenic reaction with animal cells. This process as expected is highly toxic and invariably fatal. Preso Latex was first synthesized from plants in the Aphotic Plateau.</entitydescription.scp_replicatinglatex>
+  <entityname.scp_firelatex>Ignis Latex Globule</entityname.scp_firelatex>
+  <entitydescription.scp_firelatex>A semi-organic polymer which undergoes a highly energetic exothermic reaction when coming into contact with organic tissues. It is a major component in most lethal chemical weapons and some incendiary munitions.</entitydescription.scp_firelatex>
+  <entityname.scp_smallcivkit>First Aid Kit</entityname.scp_smallcivkit>
+  <entitydescription.scp_smallcivkit>A compact first aid kit designed for non-life threatening injuries, it is found all across Europa as a result of it's ease of production and is mostly required by Coalition safety standards.</entitydescription.scp_smallcivkit>
+  <entityname.scp_largecivkit>Large First Aid Kit</entityname.scp_largecivkit>
+  <entitydescription.scp_largecivkit>A large derivative of the smaller first aid kit, containing more supplies for greater injuries or simply dealing with minor injuries in a large crew.</entitydescription.scp_largecivkit>
+  <entityname.scp_largearmykit>Large Military First Aid Kit</entityname.scp_largearmykit>
+  <entitydescription.scp_largearmykit>A large medical kit designed for use by combat medics out in the field where they will be distant from any sort of intensive care, coming with various tools and chemical compounds to deal with most injuries caused by weapons, however requires a skilled user to utilise properly.</entitydescription.scp_largearmykit>
+  <entityname.scp_armykit>Combat First Aid Kit</entityname.scp_armykit>
+  <entitydescription.scp_armykit>A compact medical kit designed specifically for dealing with injuries caused by firearms and bladed weapons, as a result it is excellent for stopping terminal haemorrhaging and stabilising most severe physical injuries.</entitydescription.scp_armykit>
+  <entityname.scp_healthpills>Rejuvination Pills</entityname.scp_healthpills>
+  <entitydescription.scp_healthpills>a plastic bottle containing capsuled pills with a highly experimental powdered mutagenic chemical, remaining in the body for a long period of time and treating most physical and biological abnormalities. Caution must be taken however due to the sheer stress this imparts on the patient's vital structures.</entitydescription.scp_healthpills>
+  <entityname.scp_painkillers>Painkillers</entityname.scp_painkillers>
+  <entitydescription.scp_painkillers>a plastic bottle containing capsuled pills of powdered opiates, remediating minor pain caused by phyiscal trauma and is an excellent option in conjunction with bed rest.</entitydescription.scp_painkillers>
+  <entityname.scp_firelatexhot>Refined Ignis Latex Syringe</entityname.scp_firelatexhot>
+  <entitydescription.scp_firelatexhot>A sample of Ignis Latex which has been modified to further increase it's lethality, capable of causing 3rd and 4th degree burns even only after a short period of contact.</entitydescription.scp_firelatexhot>
+  <entityname.scp_replicatinglatexrefined>Diluted Preso Latex Syringe</entityname.scp_replicatinglatexrefined>
+  <entitydescription.scp_replicatinglatexrefined>A sample of Preso Latex which has been chemically modified to take advantage of Preso latex's mutagenic properties, directly counteracting any Preso Latex reactions alongside partially inverting celluar atrophy caused by Ionizing Radiation.</entitydescription.scp_replicatinglatexrefined>
+  <entityname.scp_concoction>The Concoction</entityname.scp_concoction>
+  <entitydescription.scp_concoction>A syringe containing a mixture of Morbusine, Radiotoxin and Sufforin, capable of inflicting a horrendous death upon an individual you are especially not fond of in addition to being difficult to remediate. This practice of combining toxins is outlawed due to the intense degree of suffering it causes to an individual.</entitydescription.scp_concoction>
+  <entityname.scp_vodka>Condensed Ethanol</entityname.scp_vodka>
+  <entitydescription.scp_vodka>A bottle of high quality ethanol that should be used in small doses as a result of its potency. It is capable of flushing out free-radicals and poisons from the circulatory system as veins and arteries vasolidate.</entitydescription.scp_vodka>
+  <entityname.scp_pomegrenadedrink>Pomegrenade Punch</entityname.scp_pomegrenadedrink>
+  <entitydescription.scp_pomegrenadedrink>A bottle of Pomegrenade juices and Condensed Ethanol, providing an excellent drink for thirsty submariners who want a quick break from something.</entitydescription.scp_pomegrenadedrink>
+  <entityname.scp_condensedstabilozine>Condensed Stabilozine</entityname.scp_condensedstabilozine>
+  <entitydescription.scp_condensedstabilozine>An autoinjector containing Anabolic Steroids and high levels of Stabilozine, it is an excellent choice as an antidote for most poisons alongside partially treating radiation exposure. To prevent potential damage caused by injection it features a multi-stage injection system allowing multiple small doses at a time, though is liable to fail due to being ill-refined.</entitydescription.scp_condensedstabilozine>
+  <entityname.scp_adrenaline>Adrenaline Syringe</entityname.scp_adrenaline>
+  <entitydescription.scp_adrenaline>An autoinjector comprised of Adrenaline, which is useful for reviving unconscious patients from oxygen deprivation and increasing combat capabilities marginally.</entitydescription.scp_adrenaline>
+  <entityname.scp_devilsblood>Devil's Blood Syringe</entityname.scp_devilsblood>
+  <entitydescription.scp_devilsblood>A syringe of Sulphuric Acid and Ignis Latex that actively liquefies organic tissues and causes massive internal haemorrhaging. This process as expected is excruciatingly painful and traumatic for the victim.</entitydescription.scp_devilsblood>
+  <entityname.scp_wastingdiseasesyringe>Submariner's Wasting Disease Syringe</entityname.scp_wastingdiseasesyringe>
+  <entitydescription.scp_wastingdiseasesyringe>A syringe containing a poorly understood neurodegenerative prion disease commonly found dormant within various Europan creatures. These prions are activated through stimulating alien blood with the highly mutagenic Preso Latex and Sufforin, allowing for the proteins to misfold and become malignant.</entitydescription.scp_wastingdiseasesyringe>
+  <entityname.scp_wastingdiseasecure>Wasting Disease Antidote</entityname.scp_wastingdiseasecure>
+  <entitydescription.scp_wastingdiseasecure>A syringe predominantly containing Stabilozine, capable of neutralising the malignant protein structures responsible for SWD.</entitydescription.scp_wastingdiseasecure>
+  <entityname.scp_lineavirussyringe>Brunhes Lineavirus Syringe</entityname.scp_lineavirussyringe>
+  <entitydescription.scp_lineavirussyringe>A syringe containing an extremely contagious specimen of an airborne and waterborne virus that has been identified since humanity arrived, primarily affecting the respiratory and gastrointestinal system. Using Sufforin and Preso Latex as a potent activating agent, this specimen is ready for use in biological warfare. A diving mask or suit will be capable of preventing self-infection.</entitydescription.scp_lineavirussyringe>
+  <entityname.scp_lineaviruscure>Brunhes Lineavirus Antidote</entityname.scp_lineaviruscure>
+  <entitydescription.scp_lineaviruscure>A syringe predominantly containing Stabilozine and ABX, capable of dissolving the protein coating of the lineavirus virions and allowing fast recovery in addition to temporary immunity.</entitydescription.scp_lineaviruscure>
+  <entityname.scp_volatilereplicatinglatex>Volatile Preso Latex Globule</entityname.scp_volatilereplicatinglatex>
+  <entitydescription.scp_volatilereplicatinglatex>A highly unstable form of Preso Latex that readily and spotaneously attempts to react with any organic tissue within close proximity of itself. Holding onto this for a long period of time is highly discouraged.</entitydescription.scp_volatilereplicatinglatex>
+  <entityname.scp_heavyhazmatuniform>Heavy HAZMAT Suit</entityname.scp_heavyhazmatuniform>
+  <entitydescription.scp_heavyhazmatuniform>A HAZMAT Suit which has been modified to further increase the protection it provides against ionizing radiation, predominantly beta and gamma emissions. This as a result significantly increases the weight of the suit.</entitydescription.scp_heavyhazmatuniform>
+  <entityname.scp_liquidatorsuit>Liquidator Suit</entityname.scp_liquidatorsuit>
+  <entitydescription.scp_liquidatorsuit>A prototype suit predominantly made of experimental Lead-Dementonite radiation shielding, able to protect against emissions from almost any radiological hazard. It's also capable of protecting from pressure up to 4500m down, a very handy feature for sub reactor meltdowns and emergency pressure protection.</entitydescription.scp_liquidatorsuit>
+  <entityname.scp_combatmedicuniform>Combat Medic Uniform</entityname.scp_combatmedicuniform>
+  <entitydescription.scp_combatmedicuniform>A uniform with a unique looking digital camouflage printed onto it. The increased aramid padding increases its ballistic protection and also has a greater degree of storage without impeding the wearer too much.</entitydescription.scp_combatmedicuniform>
+  <entityname.scp_hardeneddivingmask>Hardened Diving Mask</entityname.scp_hardeneddivingmask>
+  <entitydescription.scp_hardeneddivingmask>A heavy duty diving mask with steel inserts, thick rubber and plexiglass lenses for better protection against facial injuries.</entitydescription.scp_hardeneddivingmask>
+  <entityname.scp_hexgasgrenade>Hexa-Nova Grenade</entityname.scp_hexgasgrenade>
+  <entitydescription.scp_hexgasgrenade>A grenade containing a lethal dose of Hexa Nova. Can kill targets within seconds.</entitydescription.scp_hexgasgrenade>
+  <entityname.scp_hexanovagent>Hexa-Nova Nerve Agent</entityname.scp_hexanovagent>
+  <entitydescription.scp_hexanovagent>An extremely potent nerve agent.</entitydescription.scp_hexanovagent>
+  <entityname.scp_latexgrenade>Preso Latex Grenade</entityname.scp_latexgrenade>
+  <afflictiondescription.tuber.self1>You have a little bit of a cough.</afflictiondescription.tuber.self1>
+  <afflictiondescription.tuber.self2>There's a sharp pain in your chest. You feel fatigued.</afflictiondescription.tuber.self2>
+  <afflictiondescription.tuber.self3>You can barely breathe.. your lungs feel like as if they were on fire.</afflictiondescription.tuber.self3>
+  <afflictiondescription.tuber.other1>The patient is coughing periodically.</afflictiondescription.tuber.other1>
+  <afflictiondescription.tuber.other2>Weakness, chest pain, shortness of breath, profuse coughing. These are all symptoms of Tuberculosis.</afflictiondescription.tuber.other2>
+  <afflictiondescription.tuber.other3>The patient is coughing up blood profusely. They won't be alive for much longer.</afflictiondescription.tuber.other3>
+  <entitydescription.scp_latexgrenade>A grenade filled with preso latex. Will seep through walls, only use with protection.</entitydescription.scp_latexgrenade>
+  <!-- ITEMS -->
+  <entityname.mannitolplus>Mannitol plus</entityname.mannitolplus>
+  <entitydescription.mannitolplus>An improved version of mannitol. It is used to quickly treat neurotrauma.</entitydescription.mannitolplus>
+  <entityname.artificialbrain>Artificial brain</entityname.artificialbrain>
+  <entitydescription.artificialbrain>An artificial brain transplant that keeps a body alive when the original brain is removed.</entitydescription.artificialbrain>
+  <entityname.surgeonclothes>Surgeon outfit</entityname.surgeonclothes>
+  <entitydescription.surgeonclothes>A sterile surgical scrub for the prevention of infection during surgery.</entitydescription.surgeonclothes>
+  <entityname.surgicalmask>Surgical mask</entityname.surgicalmask>
+  <entitydescription.surgicalmask>A mask that keeps airborne pathogens away from your patient during surgery.</entitydescription.surgicalmask>
+  <entityname.brainjar>Brain jar</entityname.brainjar>
+  <entitydescription.brainjar>A container to hold brain transplants indefinitely</entitydescription.brainjar>
+  <entityname.surgicaldrapes>Surgical drapes</entityname.surgicaldrapes>
+  <entitydescription.surgicaldrapes>Sterile sheets to prevent infection during surgery.</entitydescription.surgicaldrapes>
+  <entityname.skillbooksurgery>'Medical Misconduct'</entityname.skillbooksurgery>
+  <entitydescription.skillbooksurgery>A handbook containing numerous surgical procedures and steps to reproduce them.</entitydescription.skillbooksurgery>
+  <entityname.triagetag>Triage tag (automatic)</entityname.triagetag>
+  <entitydescription.triagetag>A label that is used to efficiently determine the type and urgency of care required for a patient in the case of a mass casualty event.</entitydescription.triagetag>
+  <entityname.manualtriagetag>Triage tag (manual)</entityname.manualtriagetag>
+  <entitydescription.manualtriagetag>A manual triage tag. Apply to the legs for green, arms for yellow, torso for red and head for black.</entitydescription.manualtriagetag>
+  <entityname.experimentaltreatment>Experimental treatment</entityname.experimentaltreatment>
+  <entitydescription.experimentaltreatment>A highly experimental drug that can cause either a little or a lot of good or bad.</entitydescription.experimentaltreatment>
+  <!-- AFFLICTIONS -->
+  <afflictionname.preventativepermit>Preventative permit</afflictionname.preventativepermit>
+  <afflictiondescription.preventativepermit>Serious injury is less likely.</afflictiondescription.preventativepermit>
+  <afflictionname.artificialbrain>Artificial brain</afflictionname.artificialbrain>
+  <afflictiondescription.artificialbrain>The patient is permanently unconscious, but the body remains alive.</afflictiondescription.artificialbrain>
+  <afflictionname.triagetag_green>Tagged: Minor</afflictionname.triagetag_green>
+  <afflictiondescription.triagetag_green>The patient has been gived the "minor" triage tag. They don't require treatment.</afflictiondescription.triagetag_green>
+  <afflictionname.triagetag_yellow>Tagged: Delayed</afflictionname.triagetag_yellow>
+  <afflictiondescription.triagetag_yellow>The patient has been gived the "delayed" triage tag. Their injuries are not life-threatening.</afflictiondescription.triagetag_yellow>
+  <afflictionname.triagetag_red>Tagged: Immediate</afflictionname.triagetag_red>
+  <afflictiondescription.triagetag_red>The patient has been gived the "immediate" triage tag. They require immediate treatment.</afflictiondescription.triagetag_red>
+  <afflictionname.triagetag_black>Tagged: Deceased</afflictionname.triagetag_black>
+  <afflictiondescription.triagetag_black>The patient has been gived the "deceased" triage tag. Medical attention is better spent elsewhere. They are as good as gone.</afflictiondescription.triagetag_black>
+  <!-- JOBS -->
+  <jobname.surgeon>Surgeon</jobname.surgeon>
+  <jobdescription.surgeon>While the medical doctor is better suited for first aid and quick response, the surgeon specializes in the optimization of surgical procedures. Lower risk of infection, faster execution, if it's related to surgery, the surgeon has it.</jobdescription.surgeon>
+  <skillname.surgery>Surgical</skillname.surgery>
+  <!-- TALENTS -->
+  <talenttree.researcher>Researcher</talenttree.researcher>
+  <talenttree.hospitalizer>Hospitalizer</talenttree.hospitalizer>
+  <talenttree.fieldsurgeon>Field surgeon</talenttree.fieldsurgeon>
+  <talentname.ntsp_autoimmune>Autoimmunosuppression</talentname.ntsp_autoimmune>
+  <talentdescription.ntsp_autoimmune>Organs that you transplant never get rejected.</talentdescription.ntsp_autoimmune>
+  <talentname.ntsp_firemanscarry>Rapid extraction</talentname.ntsp_firemanscarry>
+  <talentname.ntsp_properfol>Propofol professional</talentname.ntsp_properfol>
+  <talentdescription.ntsp_properfol>[itemname] that you administer instantly takes effect.</talentdescription.ntsp_properfol>
+  <talentname.ntsp_soothingsurgeon>Soothing surgeon</talentname.ntsp_soothingsurgeon>
+  <talentdescription.ntsp_soothingsurgeon>People you operate on suffer less traumatic shock</talentdescription.ntsp_soothingsurgeon>
+  <talentname.ntsp_preventativepermit>Preventative permit</talentname.ntsp_preventativepermit>
+  <talentdescription.ntsp_preventativepermit>The last person you ordered gains [physicalresistance]% damage resistance and is less likely to suffer serious injuries.</talentdescription.ntsp_preventativepermit>
+  <talentname.ntsp_medicallicence>Medical licence</talentname.ntsp_medicallicence>
+  <talentdescription.ntsp_medicallicence>Organs you extract sell for full price.</talentdescription.ntsp_medicallicence>
+  <talentname.ntsp_bedsidemanner>Fine bedside manner</talentname.ntsp_bedsidemanner>
+  <talentdescription.ntsp_bedsidemanner>Patients next to you passively heal at an accelerated rate. The effect is doubled if they are laying in bed.</talentdescription.ntsp_bedsidemanner>
+  <talentname.ntsp_rinseandrepeat>Rinse and repeat</talentname.ntsp_rinseandrepeat>
+  <talentdescription.ntsp_rinseandrepeat>Drainages, endovascular balloons and needles no longer get consumed when you use them.</talentdescription.ntsp_rinseandrepeat>
+  <talentname.ntsp_underpressure>Under pressure</talentname.ntsp_underpressure>
+  <talentdescription.ntsp_underpressure>Unconscious patients next to you gain [amount]% bloodloss, organ damage and neurotrauma resistance.</talentdescription.ntsp_underpressure>
+  <talentname.ntsp_rapiddeoployment>Rapid deployment</talentname.ntsp_rapiddeoployment>
+  <talentdescription.ntsp_rapiddeoployment>Gain additional movement speed equal to [skillpercentage]% of your surgery skill.</talentdescription.ntsp_rapiddeoployment>
+  <talentname.ntsp_humanmachine>The human machine</talentname.ntsp_humanmachine>
+  <talentname.ntsp_firstaidtraining>First aid advances</talentname.ntsp_firstaidtraining>
+  <talentname.ntsp_mannitol>Mannitol maniac</talentname.ntsp_mannitol>
+  <talentname.ntsp_experimental>Unethical sourcing</talentname.ntsp_experimental>
+  <talentname.ntsp_frankenstein>Dr. Frankenstein</talentname.ntsp_frankenstein>
+  <talentname.he-hungryeuropanBETTER>Hungry Europan</talentname.he-hungryeuropanBETTER>
+</infotexts>

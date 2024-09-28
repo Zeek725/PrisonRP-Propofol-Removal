@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<huskappendage>
+  <limb name="Facehugging Head limb" id="15" height="10" width="15" scale="0.65" ignorecollisions="False" flip="True">
+    <sprite texture="%ModDir%/Creature Bodys/Facehuggingnow.png" sourcerect="0,0,96,96" depth="0" origin="0.7,0.5" />
+    <StatusEffect target="This" type="OnDamaged" disabledeltatime="true" duration="1">
+      <Conditional gunshotwound="gte 30" />
+      <!-- If the head has been shot enough times that the human has enough gunshot wounds, immediately destroy the head.-->
+      <ReduceAffliction identifier="facehugging1" strength="150" />
+      <ReduceAffliction identifier="gunshotwound" strength="5" />
+      <ReduceAffliction identifier="bleeding" strength="10" />
+      <ReduceAffliction identifier="bloodloss" strength="10" />
+      <ReduceAffliction identifier="stun" strength="1" />
+      <removecharacter />
+    </StatusEffect>
+  </limb>
+  <!-- spike/tentacle thingy -->
+  <!-- Head to husk appendage -->
+  <joint name="Facehugger on Head" limb1="1" limb2="15" limb1anchor="11,-10" limb2anchor="-3,0" upperlimit="0" lowerlimit="-10" canbesevered="False" limitenabled="True" />
+  <!-- body to husk appendage -->
+</huskappendage>

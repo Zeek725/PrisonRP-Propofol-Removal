@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!-- if you want to submit an emitter, fill in the values for this portion,
+       then copy and paste it to the submission thread of the workshop page
+
+			particle="" 
+			particleburstamount="0" 
+			particleburstinterval="0" 
+			particlespersecond="1" 
+			scalemin="1" 
+			scalemax="1" 
+			anglemin="0" 
+			anglemax="359" 
+			velocitymin="0" 
+			velocitymax="0"
+            colormultiplier="255,255,255,255"
+
+  -->
+  <!-- empty template for creating a new emitter -->
+  <!--
+   <Item name=" ()" identifier="particleemitter" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+		<ParticleEmitter 
+			particle="" 
+			particleburstamount="0" 
+			particleburstinterval="0" 
+			particlespersecond="1" 
+			scalemin="1" 
+			scalemax="1" 
+			anglemin="0" 
+			anglemax="359" 
+			velocitymin="-50" 
+			velocitymax="50"
+		/>
+	  <GuiFrame/>
+    </Repairable>  
+   </Item> 
+   -->
+  <!-- steam / smoke -->
+  <Item name="Smoke Particle Emitter" identifier="particleemittersmoke" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <!-- must include the guiframe arguement for the repariable class to not break -->
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Heavy Smoke Particle Emitter" identifier="particleemitterheavysmoke" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Swirly Smoke Particle Emitter" identifier="particleemitterswirlysmoke" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="swirlysmoke" particleburstamount="0" particleburstinterval="0" particlespersecond="1" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Steam Particle Emitter" identifier="particleemittersteam" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="steam" particleburstamount="0" particleburstinterval="0" particlespersecond="2" scalemin="0.7" scalemax="0.8" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Steam Spray Particle Emitter" identifier="particleemittersteamspray" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="steamspray" particleburstamount="0" particleburstinterval="0" particlespersecond="1" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Mist Particle Emitter" identifier="particleemittermist" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="mist" particleburstamount="0" particleburstinterval="0" particlespersecond="1" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Alien Gas Particle Emitter" identifier="aliengas" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="aliengas" particleburstamount="0" particleburstinterval="0" particlespersecond="1" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <!-- flames -->
+  <Item name="Flame Particle Emitter" identifier="particleemitterflame" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="flame" particleburstamount="0" particleburstinterval="0" particlespersecond="4" scalemin="0.5" scalemax="0.6" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Flamethrower Particle Emitter" identifier="particleemitterflamethrower" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="flamethrower" particleburstamount="0" particleburstinterval="0" particlespersecond="3" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <!-- electrical -->
+  <Item name="Spark Particle Emitter" identifier="particleemitterspark" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="spark" particleburstamount="3" particleburstinterval="6" particlespersecond="0.5" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Electric Shock Particle Emitter" identifier="particleemitterelectricshock" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="ElectricShock" particleburstamount="2" particleburstinterval="2.0" particlespersecond="0.5" scalemin="0.08" scalemax="0.08" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" />
+      <!-- must include the guiframe arguement for the repariable class to not break -->
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Plasma Spark Particle Emitter" identifier="particleemitterplasmaspark" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="plasmaspark" particleburstamount="0" particleburstinterval="0" particlespersecond="0.5" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Artifact Spark Particle Emitter" identifier="particleemitterartifactspark" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="artifactspark" particleburstamount="0" particleburstinterval="0" particlespersecond="0.25" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <!-- drips -->
+  <Item name="Water Drop Particle Emitter" identifier="particleemitterwaterdrop" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="waterdrop" particleburstamount="0" particleburstinterval="0" particlespersecond="0.25" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Blood Drop Particle Emitter" identifier="particleemitterblooddrop" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="blooddrop" particleburstamount="0" particleburstinterval="0" particlespersecond="0.25" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <!-- misc. -->
+  <Item name="Flare Particle Emitter" identifier="particleemitterflare" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="flare" particleburstamount="0" particleburstinterval="0" particlespersecond="1" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Fruit Chunks Particle Emitter" identifier="particleemitterfruitchunks" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="fruitchunks" particleburstamount="0" particleburstinterval="0" particlespersecond="5" scalemin="0.4" scalemax="0.6" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <!-- underwater only -->
+  <Item name="Bubbles Particle Emitter" description="only works underwater" identifier="particleemitterbubbles" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="bubbles" particleburstamount="0" particleburstinterval="0" particlespersecond="0.5" scalemin="0.3" scalemax="0.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Damage Bubbles Particle Emitter" description="only works underwater" identifier="particleemitterdamagebubbles" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Rising Bubbles Particle Emitter" description="only works underwater" identifier="particleemitterrisingbubbles" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="risingbubbles" particleburstamount="0" particleburstinterval="0" particlespersecond="1" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Toxin Mist Particle Emitter" description="only works underwater" identifier="particleemittertoxinmist" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="toxinmist" particleburstamount="1" particleburstinterval="0" particlespersecond="1" scalemin="0.1" scalemax="0.15" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Acid Mist Particle Emitter" description="only works underwater" identifier="particleemitteracidmist" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="acidmist" particleburstamount="0" particleburstinterval="0" particlespersecond="1" scalemin="0.2" scalemax="0.2" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Lava Mist Fade Particle Emitter" description="only works underwater" identifier="particleemitterlavamistfade" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="lavamistfade" particleburstamount="0" particleburstinterval="0" particlespersecond="1" scalemin="0.1" scalemax="0.15" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+  <Item name="Spore Particle Emitter" description="only works underwater" identifier="particleemitterspore" width="64" height="64" scale="0.5" noninteractable="true" category="Decorative">
+    <sprite texture="empty.png" sourcerect="0,0,64,64" depth="0.700" premultiplyalpha="false" origin="0.5,0.5" />
+    <Repairable>
+      <ParticleEmitter particle="spore" particleburstamount="0" particleburstinterval="0" particlespersecond="1" scalemin="1" scalemax="1" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" />
+      <GuiFrame />
+    </Repairable>
+  </Item>
+</Items>

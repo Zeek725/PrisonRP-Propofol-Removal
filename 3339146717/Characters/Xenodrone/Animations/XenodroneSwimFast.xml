@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XenodroneSwimFast footrotatestrength="15" type="Xenodrone" LegMoveAmount="1.7241129" LegCycleLength="5.1599464" HandMoveAmount="0.020958312,0.022291098" HandCycleSpeed="0.08383325" HandMoveOffset="0,0" FootAngle="65" ArmMoveStrength="7" HandMoveStrength="1" FixedHeadAngle="False" SteerTorque="2" LegTorque="12" MovementSpeed="4.053913" CycleSpeed="4.053913" HeadAngle="20" TorsoAngle="0" HeadTorque="10" TorsoTorque="40" FootTorque="5" AnimationType="SwimFast" ArmIKStrength="3" HandIKStrength="10" />

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Convict Access Card" description="This card is for convicts. No access." identifier="convictcard" category="Equipment" Tags="smallitem,idcard,convict" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="%ModDir%/Keycards/newcards.png" sourcerect="0,0,148,108" origin="0.5,0.5" />
+    <Sprite texture="newcards.png" depth="0.55" sourcerect="24,452,24,16" origin="0.5,0.5" />
+    <Body width="16" height="12" density="20" />
+    <IdCard slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Maintenance Worker Access Card" description="Engine and staff access." identifier="staffcard" category="Equipment" Tags="smallitem,idcard,staff,eng" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="%ModDir%/Keycards/newcards.png" sourcerect="296,0,148,108" origin="0.5,0.5" />
+    <Sprite texture="newcards.png" depth="0.55" sourcerect="96,469,24,16" origin="0.5,0.5" />
+    <Body width="16" height="12" density="20" />
+    <IdCard slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Prison Doctor Access Card" description="This card is for medical personnel. Medbay and toxin cabinet access." identifier="medicalcard" category="Equipment" Tags="smallitem,idcard,staff,med" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="%ModDir%/Keycards/newcards.png" sourcerect="150,0,148,108" origin="0.5,0.5" />
+    <Sprite texture="newcards.png" depth="0.55" sourcerect="0,451,24,16" origin="0.5,0.5" />
+    <Body width="16" height="12" density="20" />
+    <IdCard slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Janitor Access Card" description="Allows limited access to areas of the station." identifier="janitorcard" category="Equipment" Tags="smallitem,idcard,staff,janitor" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="%ModDir%/Keycards/newcards.png" sourcerect="184,135,148,108" origin="0.5,0.5" />
+    <Sprite texture="newcards.png" depth="0.55" sourcerect="47,468,24,16" origin="0.5,0.5" />
+    <Body width="16" height="12" density="20" />
+    <IdCard slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Chef Access Card" description="Allows access to the kitchen." identifier="chefcard" category="Equipment" Tags="smallitem,idcard,chef,staff" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="%ModDir%/Keycards/newcards.png" sourcerect="365,137,148,108" origin="0.5,0.5" />
+    <Sprite texture="newcards.png" depth="0.55" sourcerect="48,452,24,16" origin="0.5,0.5" />
+    <Body width="16" height="12" density="20" />
+    <IdCard slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Guard Access Card" description="Allows access to the cellblock and armory." identifier="guardkeycard" category="Equipment" Tags="smallitem,idcard,sec,guard,staff,eng" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="%ModDir%/Keycards/newcards.png" sourcerect="15,146,145,108" origin="0.5,0.5" />
+    <Sprite texture="newcards.png" depth="0.55" sourcerect="72,468,24,16" origin="0.5,0.5" />
+    <Body width="16" height="12" density="20" />
+    <IdCard slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Head Guard Access Card" description="This card is able to open any door except for the warden's quarters." identifier="hguardcard" category="Equipment" Tags="smallitem,idcard,staff,med,eng,sec,hsec" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="%ModDir%/Keycards/newcards.png" sourcerect="740,0,148,108" origin="0.5,0.5" />
+    <Sprite texture="newcards.png" depth="0.55" sourcerect="24,468,24,16" origin="0.5,0.5" />
+    <Body width="16" height="12" density="20" />
+    <IdCard slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Warden Access Card" description="All access. The card holder is also able to use the station's intercom system with it." identifier="wardencard" category="Equipment" Tags="smallitem,idcard,sec,staff,med,eng,warden,hsec,nuke" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="%ModDir%/Keycards/newcards.png" sourcerect="584,0,148,108" origin="0.5,0.5" />
+    <Sprite texture="newcards.png" depth="0.55" sourcerect="0,468,24,16" origin="0.5,0.5" />
+    <Body width="16" height="12" density="20" />
+    <IdCard slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Hacking Device" description="A device invented by the separatists which are able to hack open any door. Mainly used by them for getting into secure coalition bases." identifier="hackingdevice" category="Equipment" Tags="smallitem,idcard,sec,staff,med,eng,warden,hsec" scale="0.4" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="%ModDir%/Keycards/newcards.png" sourcerect="450,0,128,111" origin="0.5,0.5" />
+    <Sprite texture="newcards.png" depth="0.55" sourcerect="212,446,65,39" origin="0.5,0.5" />
+    <Body width="16" height="15" density="20" />
+    <IdCard slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+  <Item name="Administrator Access Card" description="An access card given to high-ranking coalition personnel. Can open every door in all coalition stations." identifier="admincard" category="Equipment" Tags="smallitem,idcard,sec,staff,med,eng,warden,hsec,nuke" cargocontaineridentifier="metalcrate">
+    <Price baseprice="10" soldeverywhere="false" />
+    <InventoryIcon texture="%ModDir%/Keycards/newcards.png" sourcerect="572,132,148,108" origin="0.5,0.5" />
+    <Sprite texture="newcards.png" depth="0.55" sourcerect="96,452,24,16" origin="0.5,0.5" />
+    <Body width="16" height="12" density="20" />
+    <IdCard slots="Any" msg="ItemMsgPickUpSelect" />
+  </Item>
+</Items>

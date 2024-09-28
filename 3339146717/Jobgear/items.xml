@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Handgun Magazine" description="9mm magazine for the coalition-standard handgun." identifier="pistolmagazine" maxstacksize="2" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,smgammo" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="smg,smgunique,machinepistol,pistol" amount="1" spawnprobability="1" />
+    <PreferredContainer primary="armcab" amount="1" spawnprobability="1" notcampaign="true" />
+    <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="2" spawnprobability="0.5" />
+    <PreferredContainer secondary="wrecksecarmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
+    <PreferredContainer secondary="secarmcab" />
+    <Price baseprice="70" displaynonempty="true" minleveldifficulty="5">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="2" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="4" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="4" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="25">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" requiredtime="15" displayname="recycleitem">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="pistolmagazine" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="lead" mincondition="0.95" />
+      <Item identifier="aluminium" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Jobgear/weapons.png" sourcerect="79,5,19,33" origin="0.5,0.5" /> /&gt;
+    <Sprite texture="%ModDir%/Jobgear/weapons.png" depth="0.54" sourcerect="79,5,19,33" origin="0.5,0.5" /><Body width="14" height="40" density="25" /><ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" SpawnWithId="smground" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet"><Containable items="smground" /><!--Spawn an SMG round on use. Condition -4.8 -> 21 shots per magazine.--><StatusEffect type="OnUse" target="This" condition="-9.6" disabledeltatime="true"><SpawnItem identifiers="smground" spawnposition="ThisInventory" /></StatusEffect></ItemContainer><!--Magazines can be combined to raise condition.--><Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" /><Upgrade gameversion="0.10.0.0" scale="0.5" /></Item>
+  <Item name="Handgun" description="Standard-issue 9mm pistol for coalition soldiers." identifier="pistol" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer secondary="outpostsecarmcab" amount="1" spawnprobability="0.5" />
+    <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" amount="1" spawnprobability="0.25" />
+    <PreferredContainer primary="secarmcab" amount="1" notcampaign="true" />
+    <PreferredContainer secondary="armcab" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantoutpost" multiplier="2" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="iron" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="35">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="steel" amount="1" />
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Jobgear/weapons.png" sourcerect="6,3,64,52" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Jobgear/weapons.png" sourcerect="6,3,64,52" depth="0.55" origin="0.5,0.5" />
+    <Body width="72" height="40" density="25" />
+    <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="70,5" handle1="-25,-5" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="29,11" spread="0" unskilledspread="2" combatPriority="70" drawhudwhenequipped="true" crosshairscale="0.2" reload="0.4">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Content/Items/Weapons/Revolver2.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="1.5" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Contained">
+        <Use />
+      </StatusEffect>
+      <RequiredItems items="smgammo" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="40" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorslot="0" containedstateindicatorstyle="bullet" containedspritedepth="0.56">
+      <Containable items="smgammo" hide="true" itempos="4,-10" rotation="-30" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="320,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="flashlight" hide="false" itempos="0,0" setactive="true" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget sightrange="2000" soundrange="5000" fadeouttime="5" />
+    <Quality>
+      <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+    </Quality>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <SkillRequirementHint identifier="weapons" level="40" />
+  </Item>
+  <Item name="Coalition Fatigues" description="Fatigues used by Coalition members." identifier="coalitioncrewfatigues" nameidentifier="coalitioncrewoutfit" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.2" />
+    <PreferredContainer primary="crewcab" />
+    <Price baseprice="75" minleveldifficulty="10">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="false">
+        <Reputation faction="coalition" min="30" />
+      </Price>
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3">
+        <Reputation faction="coalition" min="30" />
+      </Price>
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3">
+        <Reputation faction="coalition" min="30" />
+      </Price>
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Jobgear/inventoryicons.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
+    <Sprite name="coalitioncrew" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="0,148,119,59" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Coalition Crew Fatigues Torso" texture="coalitioncrew.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Right Hand" texture="coalitioncrew.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Left Hand" texture="coalitioncrew.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Right Lower Arm" texture="coalitioncrew.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Left Lower Arm" texture="coalitioncrew.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Right Upper Arm" texture="coalitioncrew.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Left Upper Arm" texture="coalitioncrew.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Waist" texture="coalitioncrew.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Right Thigh" texture="coalitioncrew.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Left Thigh" texture="coalitioncrew.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Right Leg" texture="coalitioncrew.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Left Leg" texture="coalitioncrew.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Left Shoe" texture="coalitioncrew.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Coalition Crew Fatigues Right Shoe" texture="coalitioncrew.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,gunshotwound" damagemultiplier="0.95" />
+    </Wearable>
+  </Item>
+  <Item name="Beanie" identifier="touque" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" scale="0.4">
+    <PreferredContainer primary="crewcab" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="75">
+      <Price storeidentifier="merchantoutpost" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="3" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+    </Price>
+    <Deconstruct time="5" />
+    <Sprite name="Touque" texture="%ModDir%/Jobgear/headgears.png" depth="0.6" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Body width="80" height="45" density="15" waterdragcoefficient="10" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Touque Wearable" texture="%ModDir%/Jobgear/headgears.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.5" hidelimb="false" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    </Wearable>
+  </Item>
+  <Item name="Worker Clothes" description="Work harder, not smarter!" identifier="assistantclothes2" fallbacknameidentifier="assistantclothes" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantoutpost" minavailable="0" maxavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="0" maxavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="0" maxavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="0" maxavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="0" maxavailable="1" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="Assistant Slacks Icon" texture="%ModDir%/Jobgear/inventoryicons.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="6,363,124,67" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Assistant's Slacks Torso" texture="Assistant_2.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Right Hand" texture="Assistant_2.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Left Hand" texture="Assistant_2.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Left Lower Arm" texture="Assistant_2.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Right Lower Arm" texture="Assistant_2.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Left Upper Arm" texture="Assistant_2.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Right Upper Arm" texture="Assistant_2.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Waist" texture="Assistant_2.png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Right Thigh" texture="Assistant_2.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Left Thigh" texture="Assistant_2.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Right Leg" texture="Assistant_2.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Left Leg" texture="Assistant_2.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Right Shoe" texture="Assistant_2.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Assistant's Slacks Left Shoe" texture="Assistant_2.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <SkillModifier skillidentifier="electrical" skillvalue="5" />
+      <SkillModifier skillidentifier="helm" skillvalue="5" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="5" />
+      <SkillModifier skillidentifier="medical" skillvalue="5" />
+      <SkillModifier skillidentifier="weapons" skillvalue="5" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,bitewounds" damagemultiplier="0.95" />
+    </Wearable>
+  </Item>
+  <Item name="Hardhat" description="To protect your head." identifier="hardhatDJL" aliases="workerhelmet" category="Equipment" tags="smallitem,clothing" spritecolor="219,197,89,255" InventoryIconColor="219,197,89,255" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_heavy" scale="0.4">
+    <Price baseprice="100" sold="false">
+      <Price storeidentifier="merchantoutpost" minavailable="0" maxavailable="2" sold="true" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" maxavailable="3" sold="true" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.3" minavailable="1" maxavailable="2" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmine" multiplier="0.7" minavailable="1" maxavailable="3" sold="true" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Sprite name="Hardhat" texture="%ModDir%/Jobgear/headgears.png" sourcerect="424,206,88,95" depth="0.6" origin="0.5,0.3" />
+    <Body radius="30" density="30" />
+    <Wearable slots="Any,Head" armorvalue="20.0" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictionidentifiers="lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds, blunttrauma" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="" deflectprojectiles="true" />
+      <sprite name="Hardhat Wearable" texture="%ModDir%/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidewearablesoftype="Hair" sourcerect="424,206,88,95" origin="0.55,0.5" />
+    </Wearable>
+  </Item>
+  <Item name="Cowboy Hat" description="Yeehaw!" identifier="cowboyhatDJL" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" scale="0.4">
+    <PreferredContainer primary="crewcab" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantoutpost" minavailable="2" sold="false" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="2" />
+      <Price storeidentifier="merchantresearch" minavailable="1" multiplier="0.9" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" sold="false" />
+      <Price storeidentifier="merchantmine" minavailable="2" sold="false" />
+    </Price>
+    <Deconstruct time="5" />
+    <Sprite name="Cowboy Hat" texture="%ModDir%/Jobgear/headgears.png" depth="0.6" sourcerect="148,6,144,64" origin="0.5,0.5" />
+    <Body width="80" height="45" density="15" waterdragcoefficient="10" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Cowboy Hat Wearable" texture="%ModDir%/Jobgear/headgears.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.5" hidelimb="false" sourcerect="148,0,144,128" origin="0.5,0.5" />
+      <SkillModifier skillidentifier="helm" skillvalue="5" />
+      <SkillModifier skillidentifier="weapons" skillvalue="5" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.9" />
+    </Wearable>
+  </Item>
+  <Item name="Coalition Cap" description="Every self-respecting coalition member should have one." identifier="coalitioncap" fallbacknameidentifier="baseballcap" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" scale="0.4">
+    <PreferredContainer primary="crewcab" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="25" minleveldifficulty="10">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="false">
+        <Reputation faction="coalition" min="30" />
+      </Price>
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3">
+        <Reputation faction="coalition" min="30" />
+      </Price>
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3">
+        <Reputation faction="coalition" min="30" />
+      </Price>
+    </Price>
+    <Deconstruct time="5" />
+    <Sprite name="Baseball Cap" texture="%ModDir%/Jobgear/headgears.png" depth="0.6" sourcerect="320,327,88,51" origin="0.5,0.5" />
+    <Body width="80" height="45" density="15" waterdragcoefficient="10" />
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Baseball Cap Wearable" texture="%ModDir%/Jobgear/headgears.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" sourcerect="320,327,88,51" origin="0.45,1.0" />
+    </Wearable>
+  </Item>
+  <Item name="Old Earth Rifle" description="From the Earth. Extremely rare, doesn't work too well underwater." identifier="rifleunique" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" secondary="armcab" />
+    <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.05" />
+    <Price baseprice="500" minleveldifficulty="15" sold="false">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Sprite texture="%ModDir%/Jobgear/weapons.png" sourcerect="0,64,200,64" depth="0.55" origin="0.5,0.35" />
+    <Body width="190" height="50" density="25" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="40,-10" aimpos="55,5" handle1="-25,-16" handle2="26,0" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <ItemComponent characterusable="true">
+      <!-- define this here, because it won't work in RangedWeapon:
+        the grenade has been fired and is no longer in the container when OnUse executes -->
+      <StatusEffect type="OnUse" target="This">
+        <RequiredItem items="grenade" type="Contained" targetslot="0" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleGrenadeShot1.ogg" type="OnUse" range="1000" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleGrenadeShot2.ogg" type="OnUse" range="1000" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleGrenadeShot3.ogg" type="OnUse" range="1000" />
+      </StatusEffect>
+    </ItemComponent>
+    <RangedWeapon barrelpos="80,0" weapondamagemodifier="2" unskilledspread="2" combatPriority="70" reload="4" reloadnoskill="7" reloadskillrequirement="50" drawhudwhenequipped="true" crosshairscale="0.15">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <Sound file="Content/Items/Weapons/WEAPON_rifleShot1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Content/Items/Weapons/WEAPON_rifleShot2.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/Weapons/WEAPON_rifleShot3.ogg" type="OnUse" range="3000" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="4.0" shockwave="false" smoke="false" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="4.0" />
+      </StatusEffect>
+      <!-- Cocking sound, delayed by varied seconds. -->
+      <StatusEffect type="OnUse" delay="1" target="Character">
+        <Conditional skillrequirement="true" weapons="gte 50" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleReload50-_1.ogg" type="OnUse" range="500" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleReload50-_2.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" delay="1" target="Character" comparison="and">
+        <Conditional skillrequirement="true" weapons="lt 50" />
+        <Conditional skillrequirement="true" weapons="gte 20" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleReload20-50_1.ogg" type="OnUse" range="500" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleReload20-50_2.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" delay="1" target="Character">
+        <Conditional skillrequirement="true" weapons="lt 20" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleReload0-20_1.ogg" type="OnUse" range="500" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/WEAPON_rifleReload0-20_2.ogg" type="OnUse" range="500" />
+      </StatusEffect>
+      <RequiredItems items="rifleammo,grenade" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="60" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="false" containedstateindicatorstyle="bullet" containedstateindicatorslot="1" containedspritedepth="0.56">
+      <Containable items="grenade" hide="false" itempos="50,0" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="448,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="2" texture="Content/UI/StatusMonitorUI.png" sourcerect="320,448,64,64" origin="0.5,0.5" />
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="rifleammo" hide="true" />
+      </SubContainer>
+      <SubContainer capacity="1" maxstacksize="1">
+        <Containable items="flashlight" hide="false" itempos="30,-3" setactive="true" />
+      </SubContainer>
+    </ItemContainer>
+    <aitarget sightrange="3000" soundrange="5000" fadeouttime="5" />
+    <Quality>
+      <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+    </Quality>
+    <SkillRequirementHint identifier="weapons" level="60" />
+  </Item>
+  <Item name="Cigarette" description="May cause lung cancer." identifier="cigaretteDJL" category="Misc" Tags="smallitem" scale="0.5" maxstacksize="8" cargocontaineridentifier="metalcrate" allowasextracargo="true" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
+    <PreferredContainer primary="crewcab" />
+    <Price baseprice="130" sold="false" />
+    <Fabricate suitablefabricators="vendingmachine" requiredtime="0.5" requiredmoney="160" fabricationlimitmin="0" fabricationlimitmax="8" />
+    <InventoryIcon texture="%ModDir%/Jobgear/inventoryicons.png" sourcerect="0,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Jobgear/cigarette.png" sourcerect="35,55,27,7" depth="0.55" origin="0.5,0.5" />
+    <Body width="30" height="10" density="9.9" />
+    <Holdable slots="Any,RightHand,LeftHand" aimable="false" aimpos="30,14" handle1="0,-10" swingamount="0,0" swingspeed="0.5" swingwhenusing="true" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-4.0">
+        <ParticleEmitter particle="swirlysmoke" particlespersecond="2" scalemin="1" scalemax="2" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character">
+        <Affliction identifier="psychosisresistance" amount="3" />
+        <Affliction identifier="lungdamage" amount="2" />
+        <ReduceAffliction identifier="psychosis" amount="1.5" />
+        <ReduceAffliction identifier="hallucinating" amount="2.5" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="Suicide Vest" description="'Stop right there you terrorist!'" identifier="suicidevestDJL" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <PreferredContainer primary="secarmcab" amount="1" notcampaign="true" />
+    <PreferredContainer secondary="wreckarmcab,abandonedarmcab,outpostarmcab" amount="1" spawnprobability="0.05" />
+    <PreferredContainer secondary="armcab" />
+    <Price baseprice="480" sold="false">
+      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="3" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
+    </Price>
+    <Deconstruct time="40">
+      <Item identifier="ballisticfiber" amount="2" />
+      <Item identifier="detonator" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredSkill identifier="electrical" level="30" />
+      <RequiredItem identifier="ballisticfiber" amount="3" />
+      <Item identifier="detonator" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,256,64,64" origin="0.5,0.5" />
+    <Sprite name="Security Vest Item" texture="Content/Items/Jobgear/Mechanic/safetyharness.png" sourcerect="4,32,126,183" depth="0.6" origin="0.5,0.35" />
+    <Body width="85" height="90" density="25" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+      <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.9" />
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="bitewounds" armorsector="0.0,360.0" damagemultiplier="0.4" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+      <sprite name="Security Vest Wearable" texture="Content/Items/Jobgear/Mechanic/safetyharness.png" limb="Torso" hidelimb="false" inheritscale="true" scale="0.65" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" sourcerect="4,32,126,183" />
+    </Wearable>
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">
+      <GuiFrame relativesize="0.15,0.1" anchor="BottomCenter" pivot="BottomCenter" relativeoffset="0,0.1" style="ItemUI" />
+      <Button text="bombtrigger" connection="signal_out1">
+        <StatusEffect type="OnUse" target="Contained">
+          <Use />
+        </StatusEffect>
+      </Button>
+    </CustomInterface>
+    <ItemContainer canbeselected="true" capacity="1" maxstacksize="1" itempos="20,-11" hideitems="false" containedstateindicatorstyle="explosive" containedspritedepth="0.81">
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="explosive" />
+    </ItemContainer>
+  </Item>
+</Items>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+  <Talent identifier="combatinstincts">
+    <Description tag="talentdescription.combatinstincts"></Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,4" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData tags="divingknife" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyAttackData addeddamagemultiplier="2" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="he-hungryeuropanBETTER">
+    <Icon texture="%ModDir:2954998725%/Content/UI/HE-IconsAtlas.png" sourcerect="0,256,119,119" origin="0.5,0.5" />
+    <Description tag="talentdescription.he-hungryeuropan" />
+    <AbilityGroupInterval interval="1.0">
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Conditional he-stuffed="eq 0" />
+              <Affliction identifier="hunger" strength="0.03" />
+            </StatusEffect>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="thirst" strength="0.055" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="imadoctornota">
+    <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.skillbonus">
+      <Replace tag="[amount]" value="25" />
+      <Replace tag="[skillname]" value="skillname.electrical" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.skillbonus">
+      <Replace tag="[amount]" value="25" />
+      <Replace tag="[skillname]" value="skillname.mechanical" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.skillbonus">
+      <Replace tag="[amount]" value="10" />
+      <Replace tag="[skillname]" value="skillname.helm" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.skillbonus">
+      <Replace tag="[amount]" value="15" />
+      <Replace tag="[skillname]" value="skillname.weapons" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.skillbonus">
+      <Replace tag="[amount]" value="15" />
+      <Replace tag="[skillname]" value="skillname.medical" color="gui.orange" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="ElectricalSkillBonus" value="25" />
+        <CharacterAbilityGiveStat stattype="MechanicalSkillBonus" value="25" />
+        <CharacterAbilityGiveStat stattype="HelmSkillBonus" value="10" />
+        <CharacterAbilityGiveStat stattype="WeaponsSkillBonus" value="15" />
+        <CharacterAbilityGiveStat stattype="MedicalSkillBonus" value="15" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+</Talents>
