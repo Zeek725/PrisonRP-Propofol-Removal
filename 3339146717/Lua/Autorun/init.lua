@@ -13,5 +13,5 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
 end
 
 -- client-side code
-if CLIENT then
+if CLIENT then -- test
 end
