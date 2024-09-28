@@ -23,10 +23,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y lib32gcc-s1 python3-pip
 
-      - name: Install Python Dependencies
-        run: |
-          pip3 install steam google protobuf
-
       - name: Install SteamCMD
         run: |
           cd /steamcmd
@@ -42,17 +38,12 @@ jobs:
         run: |
           sed -i 's/"changenote" ".*"/"changenote" "${COMMIT_MESSAGE}"/' prisonrpcontentpackage.vdf
 
-      - name: Generate Steam Guard Code
-        id: steam_guard_code
-        run: |
-          python3 -c "from steam.guard import SteamAuthenticator; import os; shared_secret = os.getenv('STEAM_SHARED_SECRET'); auth = SteamAuthenticator(shared_secret); code = auth.get_code(); print(f'STEAM_GUARD_CODE={code}', file=open(os.getenv('GITHUB_ENV'), 'a'))"
-        env:
-          STEAM_SHARED_SECRET: ${{ secrets.STEAM_SHARED_SECRET }}
-
       - name: Upload Mod to Steam Workshop
         run: |
           cd /steamcmd
-          ./steamcmd.sh +login "${{ secrets.STEAM_USERNAME }}" "${{ secrets.STEAM_PASSWORD }}" +authcode "${{ env.STEAM_GUARD_CODE }}" +workshop_build_item prisonrpcontentpackage.vdf +quit
+          echo "Please enter your Steam Guard code:"
+          read -s STEAM_GUARD_CODE
+          ./steamcmd.sh +login "${{ secrets.STEAM_USERNAME }}" "${{ secrets.STEAM_PASSWORD }}" +authcode "$STEAM_GUARD_CODE" +workshop_build_item prisonrpcontentpackage.vdf +quit
         env:
           STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
           STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}
