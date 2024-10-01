@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Prison RP Content Package Reupload" modversion="1.0" corepackage="False" steamworkshopid="3339146717" gameversion="1.5.9.2">
+<contentpackage name="Prison RP Content Package Reupload" modversion="1.4" corepackage="False" steamworkshopid="3339146717" gameversion="1.5.9.2">
   <Jobs file="%ModDir%/Jobs.xml" />
   <Jobs file="%ModDir%/JobOverrides.xml" />
   <Text file="%ModDir%/Language/English.xml" />
