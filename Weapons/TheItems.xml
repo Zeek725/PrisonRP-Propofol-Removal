@@ -427,7 +427,7 @@
       </StatusEffect>
     </ItemComponent>
   </Item>
-  <Item name="R.A.G.E." identifier="ragenuke" tags="railgunequipment,railgunammo" showcontentsintooltip="true" category="Weapon" sonarsize="5" scale="0.5" impactsoundtag="impact_metal_heavy">
+  <!--<Item name="R.A.G.E." identifier="ragenuke" tags="railgunequipment,railgunammo" showcontentsintooltip="true" category="Weapon" sonarsize="5" scale="0.5" impactsoundtag="impact_metal_heavy">
     <Price baseprice="1" sold="false"></Price>
     <Deconstruct time="10">
       <Item identifier="steel" />
@@ -477,7 +477,6 @@
       <StatusEffect type="OnNotContained" target="Contained" allowwhenbroken="true">
         <Use />
       </StatusEffect>
-      <!-- Remove the item after exploding -->
       <StatusEffect type="OnBroken" target="This">
         <Remove />
       </StatusEffect>
@@ -486,7 +485,7 @@
       <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
       <Containable items="smallitem" />
     </ItemContainer>
-  </Item>
+  </Item>-->
   <!--shotgun-->
   <Item name="Shorty Shotgun" identifier="arak_shortyshotgun" category="Weapon" subcategory="Firearms" cargocontaineridentifier="metalcrate" description="(12-GA) A small shotgun, favored by revolutionists and pirates alike." tags="smallitem,weapon,gun,provocativetohumanai,gunsmith,mountableweapon,shotgun" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="secarmcab" />
