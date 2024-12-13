@@ -48,178 +48,6 @@
       </StatusEffect>
     </MeleeWeapon>
   </Item>
-  <Item name="" description="" maxstacksize="2" identifier="scp_firelatex" category="equipment" Tags="smallitem,medical" useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.55" impactsoundtag="impact_soft" RequireAimToUse="True">
-    <PreferredContainer primary="toxcab" minamount="0" maxamount="2" spawnprobability="0.25" />
-    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.2" />
-    <Price baseprice="400" displaynonempty="true" minleveldifficulty="15">
-      <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
-      <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="1" maxavailable="2" />
-      <Price storeidentifier="merchantresearch" sold="false" multiplier="1.25" />
-      <Price storeidentifier="merchantmilitary" multiplier="0.95" minavailable="0" maxavailable="2" />
-      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
-      <Price storeidentifier="merchantarmory" multiplier="0.95" minavailable="0" maxavailable="2" />
-    </Price>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
-      <RequiredSkill identifier="medical" level="55" />
-      <RequiredItem identifier="scp_replicatinglatex" mincondition="0.5" />
-      <RequiredItem identifier="carbon" amount="2" />
-      <RequiredItem identifier="sulphuricacid" amount="2" />
-    </Fabricate>
-    <Deconstruct time="10">
-      <Item identifier="incendium" mincondition="0.1" outcondition="0.5" />
-    </Deconstruct>
-    <InventoryIcon texture="%ModDir%/Medical/medical.png" sourcerect="268,100,51,66" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Medical/medical.png" sourcerect="268,100,51,66" depth="0.6" origin="0.5,0.5" />
-    <Body width="25" height="40" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="10" reload="2.0" msg="ItemMsgPickUpSelect">
-      <RequiredSkill identifier="medical" level="65" />
-      <StatusEffect type="OnUse" target="This" Condition="-50" disabledeltatime="true" />
-      <StatusEffect type="OnFailure" target="This" Condition="-100" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="10.0">
-        <Sound file="%ModDir%/Medical/Sounds/latex.ogg" type="OnUse" range="300" />
-        <Affliction identifier="burn" amount="4" />
-        <Affliction identifier="acidburn" amount="2" />
-        <Affliction identifier="organdamage" amount="3" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnUse" target="UseTarget">
-        <Affliction identifier="scp_devilpoisoning" amount="1" probability="0.25" />
-      </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="5.0">
-        <Sound file="%ModDir%/Medical/Sounds/latexfail.ogg" type="OnUse" range="1500" />
-        <Affliction identifier="burn" amount="2" />
-        <Affliction identifier="organdamage" amount="1" />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <Remove />
-      </StatusEffect>
-      <StatusEffect type="Always" target="NearbyCharacters,This" range="200" interval="5">
-        <Conditional hastag="neq radiationshielding" targetcontainer="true" />
-        <Affliction identifier="burn" amount="6" probability="0.01" />
-        <Affliction identifier="burn" amount="12" probability="0.01" />
-        <Affliction identifier="acidburn" amount="12" probability="0.01" />
-      </StatusEffect>
-    </MeleeWeapon>
-  </Item>
-  <Item name="Devil's Breath Grenade" description="A grenade filled with Devil's blood in gas form." identifier="scp_devilsgrenade" category="Weapon" subcategory="Grenades and Explosives" maxstacksize="2" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" scale="0.5" impactsoundtag="impact_metal_heavy">
-    <PreferredContainer primary="toxcab" minamount="0" maxamount="1" spawnprobability="0.075" />
-    <PreferredContainer secondary="wreckarmcab" minamount="0" maxamount="2" spawnprobability="0.075" minleveldifficulty="15" />
-    <Price baseprice="400" sold="false"></Price>
-    <Deconstruct time="10">
-      <Item identifier="iron" />
-      <Item identifier="flashpowder" outcondition="0.25" />
-      <Item identifier="scp_devilsblood" outcondition="0.5" />
-    </Deconstruct>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30" amount="2">
-      <RequiredSkill identifier="weapons" level="30" />
-      <RequiredSkill identifier="medical" level="65" />
-      <RequiredItem identifier="steel" />
-      <RequiredItem identifier="scp_devilsblood" />
-      <RequiredItem identifier="flashpowder" mincondition="0.5" />
-    </Fabricate>
-    <InventoryIcon texture="%ModDir%/Weapons/grenades.png" sourcerect="116,278,57,57" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Weapons/grenades.png" sourcerect="77,196,27,59" depth="0.55" origin="0.5,0.5" />
-    <Body radius="20" height="10" density="30" />
-    <ItemComponent characterusable="false">
-      <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" count="3" spread="25" />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <Remove />
-      </StatusEffect>
-    </ItemComponent>
-    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="2" setvalue="true" />
-      <StatusEffect type="OnSecondaryUse" delay="1">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.1">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.2">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.3">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.4">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.5">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.6">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.7">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.8">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.9">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="2">
-        <SpawnItem identifiers="scp_devilgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <sound file="%ModDir%/Medical/Sounds/latexgrenadebang.ogg" type="OnUse" volume="1.75" range="8000" selectionmode="All" />
-        <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" type="OnUse" range="8000" />
-        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="25" velocitymin="500" velocitymax="1000" scalemin="1.0" scalemax="1.5" colormultiplier="0,0,0,0" />
-        <Explosion range="400.0" structuredamage="5" ballastfloradamage="240" itemdamage="25" force="20" severlimbsprobability="0.5" decal="explosion" decalsize="1">
-          <Affliction identifier="bleeding" strength="25" />
-          <Affliction identifier="scp_devilsbreathexposure" strength="20" />
-          <Affliction identifier="stun" strength="1" />
-        </Explosion>
-      </StatusEffect>
-    </Throwable>
-    <Quality>
-      <QualityStat stattype="ExplosionRadius" value="0.1" />
-      <QualityStat stattype="ExplosionDamage" value="0.1" />
-    </Quality>
-  </Item>
-  <Item name="devil Emitter" identifier="scp_devilgas" Scale="1" tags="gas" sonarsize="0" hideinmenus="true" health="15" depth="0.1" isdangerous="true" noninteractable="true">
-    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
-    <Body width="38" height="15" bodytype="kinematic" />
-    <ItemComponent>
-      <StatusEffect type="OnSpawn" target="This" duration="0.65">
-        <ParticleEmitter particle="acidmistgrenade" particlespersecond="3" scalemin="0.7" scalemax="0.8" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" copyentityangle="false" />
-      </StatusEffect>
-      <StatusEffect type="OnSpawn" target="This" duration="15">
-        <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="4" scalemax="6" anglemin="0" anglemax="360" colormultiplier="255,0,0,255" copyentityangle="false" />
-      </StatusEffect>
-      <StatusEffect type="Always" target="This" disabledeltatime="false" condition="-1">
-        <Sound file="Content/Items/Tools/Sprayer.ogg" range="300" volume="0.1" loop="true" />
-      </StatusEffect>
-      <StatusEffect type="Always" target="NearbyCharacters" range="300" interval="1" stackable="false" disabledeltatime="true" targetlimbs="Torso,Head">
-        <Affliction identifier="scp_devilsbreathexposure" strength="2" />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <Remove />
-      </StatusEffect>
-    </ItemComponent>
-  </Item>
-  <Item name="devil Emitter" identifier="scp_devilgasshotgun" Scale="1" tags="gas" sonarsize="0" hideinmenus="true" health="10" depth="0.1" isdangerous="true" noninteractable="true">
-    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
-    <Body width="38" height="15" bodytype="kinematic" />
-    <ItemComponent>
-      <StatusEffect type="OnSpawn" target="This" duration="1">
-        <ParticleEmitter particle="acidmistgrenade" particlespersecond="3" scalemin="0.5" scalemax="0.6" anglemin="0" anglemax="360" colormultiplier="255,0,0,150" copyentityangle="false" />
-      </StatusEffect>
-      <StatusEffect type="OnSpawn" target="This" duration="4">
-        <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="4" scalemax="6" anglemin="0" anglemax="360" colormultiplier="255,0,0,175" copyentityangle="false" />
-      </StatusEffect>
-      <StatusEffect type="Always" target="This" disabledeltatime="false" condition="-1">
-        <Sound file="Content/Items/Tools/Sprayer.ogg" range="300" volume="0" loop="true" />
-      </StatusEffect>
-      <StatusEffect type="Always" target="NearbyCharacters" range="150" interval="1" stackable="false" disabledeltatime="true" targetlimbs="Torso">
-        <Affliction identifier="scp_devilsbreathexposure" strength="3" />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <Remove />
-      </StatusEffect>
-    </ItemComponent>
-  </Item>
   <Item name="Preso Emitter" identifier="scp_presoliquid" Scale="1" tags="gas" sonarsize="0" hideinmenus="true" health="20" depth="0.1" isdangerous="true" noninteractable="true">
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
     <Body width="38" height="15" bodytype="kinematic" />
@@ -248,12 +76,10 @@
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="40">
       <RequiredSkill identifier="medical" level="80" />
       <RequiredItem identifier="plastic" amount="2" />
-      <RequiredItem identifier="scp_devilsblood" amount="2" />
       <RequiredItem identifier="scp_firelatex" amount="2" />
     </Fabricate>
     <Deconstruct time="10">
       <Item identifier="plastic" copycondition="true" />
-      <Item identifier="scp_devilsblood" copycondition="true" />
     </Deconstruct>
     <InventoryIcon texture="%ModDir%/medical/medical.png" sourcerect="370,205,46,46" origin="0.5,0.5" />
     <Sprite name="novacompoundground" texture="%ModDir%/medical/medical.png" sourcerect="350,205,20,41" depth="0.55" origin="0.5,0.5" />
@@ -338,74 +164,6 @@
       </StatusEffect>
     </Throwable>
   </Item>
-  <Item name="" description="" identifier="scp_hexgasgrenade" category="Weapon" subcategory="Grenades and Explosives" maxstacksize="2" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" scale="0.5" impactsoundtag="impact_metal_heavy">
-    <PreferredContainer primary="toxcab" />
-    <PreferredContainer secondary="wreckmedcab" minamount="0" maxamount="2" spawnprobability="0.01" minleveldifficulty="15" />
-    <Price baseprice="400" sold="false"></Price>
-    <Deconstruct time="10">
-      <Item identifier="iron" />
-      <Item identifier="flashpowder" outcondition="0.25" />
-    </Deconstruct>
-    <Fabricate suitablefabricators="medicalfabricator" requiredtime="45" amount="2">
-      <RequiredSkill identifier="weapons" level="45" />
-      <RequiredSkill identifier="medical" level="80" />
-      <RequiredItem identifier="steel" />
-      <RequiredItem identifier="scp_hexanovagent" />
-      <RequiredItem identifier="flashpowder" />
-    </Fabricate>
-    <InventoryIcon texture="%ModDir%/Weapons/grenades.png" sourcerect="173,285,52,52" origin="0.5,0.5" />
-    <Sprite name="hexgrenadeground" texture="%ModDir%/Weapons/grenades.png" sourcerect="107,204,25,51" depth="0.55" origin="0.5,0.5" />
-    <Body radius="20" height="10" density="30" />
-    <ItemComponent characterusable="false">
-      <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true">
-        <SpawnItem identifiers="scp_hexgas" spawnposition="This" count="1" spread="25" />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <Remove />
-      </StatusEffect>
-    </ItemComponent>
-    <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="3.5" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="4" setvalue="true" />
-      <StatusEffect type="OnSecondaryUse" delay="1.5">
-        <SpawnItem identifiers="scp_hexgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.6">
-        <SpawnItem identifiers="scp_hexgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.7">
-        <SpawnItem identifiers="scp_hexgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.8">
-        <SpawnItem identifiers="scp_hexgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="1.9">
-        <SpawnItem identifiers="scp_hexgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="2">
-        <SpawnItem identifiers="scp_hexgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="2.1">
-        <SpawnItem identifiers="scp_hexgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnSecondaryUse" delay="2.2">
-        <SpawnItem identifiers="scp_hexgas" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <sound file="%ModDir%/Medical/Sounds/latexgrenadebang.ogg" type="OnUse" volume="1.75" range="8000" selectionmode="All" />
-        <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" type="OnUse" range="8000" />
-        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="25" velocitymin="500" velocitymax="1000" scalemin="1.0" scalemax="1.5" colormultiplier="0,0,0,0" />
-        <Explosion range="600.0" structuredamage="5" ballastfloradamage="240" itemdamage="25" force="20" severlimbsprobability="0.5" decal="explosion" decalsize="1">
-          <Affliction identifier="bleeding" strength="25" />
-          <Affliction identifier="scp_hexgasexposure" strength="20" />
-          <Affliction identifier="stun" strength="1" />
-        </Explosion>
-      </StatusEffect>
-    </Throwable>
-    <Quality>
-      <QualityStat stattype="ExplosionRadius" value="0.1" />
-      <QualityStat stattype="ExplosionDamage" value="0.1" />
-    </Quality>
-  </Item>
   <Item name="Hex Emitter" identifier="scp_hexgas" Scale="1" tags="gas" sonarsize="0" hideinmenus="true" health="20" depth="0.1" isdangerous="true" noninteractable="true">
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
     <Body width="38" height="15" bodytype="kinematic" />
@@ -427,65 +185,73 @@
       </StatusEffect>
     </ItemComponent>
   </Item>
-  <!--<Item name="R.A.G.E." identifier="ragenuke" tags="railgunequipment,railgunammo" showcontentsintooltip="true" category="Weapon" sonarsize="5" scale="0.5" impactsoundtag="impact_metal_heavy">
-    <Price baseprice="1" sold="false"></Price>
-    <Deconstruct time="10">
-      <Item identifier="steel" />
-      <Item identifier="uranium" />
-      <Item identifier="incendium" />
-    </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="30">
-      <RequiredSkill identifier="weapons" level="80" />
-      <RequiredItem identifier="steel" amount="4" />
-      <RequiredItem identifier="uranium" />
-      <RequiredItem identifier="ic4block" />
-      <RequiredItem identifier="flashpowder" amount="8" />
-    </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="1,131,217,33" depth="0.55" origin="0.5,0.5" />
-    <Body width="215" height="30" density="35" />
-    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" msg="ItemMsgPickUpSelect" />
-    <Projectile characterusable="false" launchimpulse="0" maxtargetstohit="1" damagedoors="true">
-      <Attack structuredamage="100" itemdamage="50" severlimbsprobability="5" penetration="0.5" targetforce="1000">
-        <Affliction identifier="explosiondamage" strength="250" />
-        <Affliction identifier="bleeding" strength="50" />
-        <Affliction identifier="stun" strength="15" />
-      </Attack>
-      <StatusEffect type="OnNotContained" target="This" Condition="-100.0" setvalue="true" allowwhenbroken="true">
-        <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" range="50000" />
-        <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" range="50000" />
-        <Explosion range="1500.0" structuredamage="600" itemdamage="1000" ballastfloradamage="1000" force="50.0" severlimbsprobability="2" decal="explosion" decalsize="1.0" camerashake="1000" camerashakerange="50000" flashrange="10000" flashduration="5.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="5.0" penetration="0.5">
-          <Affliction identifier="explosiondamage" strength="1000" />
-          <Affliction identifier="burn" strength="1000" />
-          <Affliction identifier="radiationsickness" strength="100" />
-          <Affliction identifier="bleeding" strength="40" probability="0.05" dividebylimbcount="false" />
-          <Affliction identifier="stun" strength="30" />
-        </Explosion>
-        <Explosion range="2000" force="0.0" smoke="false" sparks="false" empstrength="2.5" applyfireeffects="false" ignorecover="true">
-          <Affliction identifier="emp" strength="50" multiplybymaxvitality="true" />
-        </Explosion>
-        <ParticleEmitter particle="underwaterexplosion" anglemin="0" anglemax="360" particleamount="3" velocitymin="0" velocitymax="0" scalemin="15" scalemax="15" />
-        <SpawnItem identifier="nuclearaftereffectemitter" spawnposition="This" />
-      </StatusEffect>
-      <StatusEffect type="OnNotContained" target="This">
-        <sound file="Content/Items/Weapons/ExplosionDebris4.ogg" range="5000" />
-        <sound file="Content/Items/Weapons/ExplosionDebris5.ogg" range="5000" />
-      </StatusEffect>
-      <StatusEffect type="OnActive" target="This">
-        <ParticleEmitter particle="bubbles" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="50" scalemin="1" scalemax="3" />
-      </StatusEffect>
-      <StatusEffect type="OnNotContained" target="Contained" allowwhenbroken="true">
-        <Use />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <Remove />
-      </StatusEffect>
-    </Projectile>
-    <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false">
-      <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
-      <Containable items="smallitem" />
-    </ItemContainer>
-  </Item>-->
+
+  <Item name="Health Scanner" identifier="healthscannerevil" scale="0.27" category="Equipment" tags="smallitem,tool,medical" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true" requireaimtouse="True" useinhealthinterface="True">
+      <PreferredContainer primary="medcab" amount="1" spawnprobability="0.5" notcampaign="true" />
+      <Price baseprice="150" minavailable="1">
+        <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
+        <Price storeidentifier="merchantcity" multiplier="1.2" />
+        <Price storeidentifier="merchantresearch" minavailable="8" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25" />
+        <Price storeidentifier="merchantmine" sold="false" />
+        <Price storeidentifier="merchantmedical" minavailable="8" />
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="aluminium" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="10">
+        <RequiredSkill identifier="medical" level="40" />
+        <RequiredItem identifier="fpgacircuit" />
+        <RequiredItem identifier="aluminium" />
+      </Fabricate>
+      <InventoryIcon texture="%ModDir:3190189044%/Images/InventoryItemIconAtlas.png" sourcerect="448,64,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir:3190189044%/Images/InGameItemIconAtlas.png" sourcerect="768,0,128,128" depth="0.6" origin="0.5,0.5" />
+      <Body width="112" height="96" density="25" />
+      <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-23" aimpos="100,0" handle1="-33,-4" handle2="-33,-4" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnUse" target="This" Voltage="1.0" setvalue="true">
+          <RequiredItem items="mobilebattery" type="Contained" />
+        </StatusEffect>
+      </Holdable>
+      <Propulsion force="0">
+        <RequiredItems items="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
+        <StatusEffect type="OnUse" target="Contained" Condition="-1.0">
+          <RequiredItem items="batterycell" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained" Condition="-0.5">
+          <RequiredItem items="fulguriumbatterycell" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Contained" Condition="-1.0">
+          <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="NearbyCharacters" range="50">
+          <Affliction identifier="radiationsickness" amount="10" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character">
+          <ReduceAffliction identifier="radiationsickness" amount="0.1" />
+        </StatusEffect>
+        <LightComponent LightColor="100,255,100,200" Flicker="0.5" range="10" powerconsumption="0">
+          <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.4" size="4,4" />
+        </LightComponent>
+      </Propulsion>
+      <LightComponent LightColor="100,255,100,200" Flicker="0.25" range="10" powerconsumption="10" />
+      <ItemContainer capacity="0" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable items="divingsuitfuel">
+            <StatusEffect type="OnUse" target="This,Character" Voltage="1.0" setvalue="true">
+              <Conditional IsDead="false" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable items="mobilebattery">
+            <StatusEffect type="OnUse" target="This,Character" Voltage="1.0" setvalue="true">
+              <Conditional IsDead="false" />
+            </StatusEffect>
+          </Containable>
+        </SubContainer>
+      </ItemContainer>
+    </Item>
+  
   <!--shotgun-->
   <Item name="Shorty Shotgun" identifier="arak_shortyshotgun" category="Weapon" subcategory="Firearms" cargocontaineridentifier="metalcrate" description="(12-GA) A small shotgun, favored by revolutionists and pirates alike." tags="smallitem,weapon,gun,provocativetohumanai,gunsmith,mountableweapon,shotgun" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="secarmcab" />
