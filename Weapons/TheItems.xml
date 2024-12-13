@@ -251,6 +251,8 @@
         </SubContainer>
       </ItemContainer>
     </Item>
+
+    
   
   <!--shotgun-->
   <Item name="Shorty Shotgun" identifier="arak_shortyshotgun" category="Weapon" subcategory="Firearms" cargocontaineridentifier="metalcrate" description="(12-GA) A small shotgun, favored by revolutionists and pirates alike." tags="smallitem,weapon,gun,provocativetohumanai,gunsmith,mountableweapon,shotgun" Scale="0.5" impactsoundtag="impact_metal_light">
