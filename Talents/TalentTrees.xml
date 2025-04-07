@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TalentTrees>
   <TalentTree jobidentifier="warden">
     <SubTree identifier="captain_primary" nameidentifier="talenttree.primary" type="primary">
@@ -370,7 +370,6 @@
         <TalentOption identifier="ntsp_soothingsurgeon" />
       </TalentOptions>
       <TalentOptions>
-        <TalentOption identifier="ntsp_properfol" />
         <TalentOption identifier="ntsp_mannitol" />
       </TalentOptions>
       <TalentOptions>
