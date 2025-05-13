@@ -206,12 +206,6 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-    <Talent identifier="ntsp_properfol">
-      <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="4,0" sheetelementsize="128,128" />
-      <Description tag="talentdescription.ntsp_properfol">
-        <Replace tag="[itemname]" value="entityname.propofol" color="gui.orange" />
-      </Description>
-    </Talent>
     <Talent identifier="ntsp_soothingsurgeon">
       <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,0" sheetelementsize="128,128" />
       <Description tag="talentdescription.ntsp_soothingsurgeon" />
